@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!--图片滑动门效果控制-------------------->
+ <script src="js/FancyZoom.js" language="JavaScript" type="text/javascript"></script>
+    <script src="js/FancyZoomHTML.js" language="JavaScript" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+		<script>
+			$(function(){
+				var aLi = $('#sidebar ul li');
+				var oImg,aP;
+				aLi.hover(function(){
+					oImg = $(this).find('.imgBox');
+					aP = $(this).find('p');
+					oImg.stop().animate({
+						top:-180
+					},450);
+					aP.eq(0).stop().animate({
+						top:24
+					},450);
+					aP.eq(1).stop().animate({
+						top:0
+					},450);
+				},function(){
+					oImg.stop().animate({
+						top:0
+					},450);
+					aP.eq(0).stop().animate({
+						top:0
+					},450);
+					aP.eq(1).stop().animate({
+						top:24
+					},450);
+				})
+			})
+		</script>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onLoad="setupZoom();">
+
+<!--回顶部-->
+<div id='rtt' style="cursor:pointer;"></div>
+<!--向下滑动 控制-->
+<script>  
+$(function()  
+{  
+     $('#scollWin').click(function(){  
+         $('html,body').animate({  
+         scrollTop: $("#bg").offset().top  
+         }, 2000);  
+     })  
+})  
+$(function()  
+{  
+     $('#scollWin2').click(function(){  
+         $('html,body').animate({  
+         scrollTop: $("#bg2").offset().top  
+         }, 3000);  
+     })  
+})  
+</script> 
+<!--照片墙-->
+<div class="photoblock-many">
+	<a href="images/wall/mwsf-2.jpg" title="呵呵"><img src="images/wall/mwsf-2.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-2" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-14.jpg"><img src="images/wall/mwsf-14.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-14" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-5.jpg" title="呵呵"><img src="images/wall/mwsf-5.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-5" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-6.jpg" title="呵呵"><img src="images/wall/mwsf-6.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-6" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-16.jpg" title="呵呵"><img src="images/wall/mwsf-16.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-16" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-20.jpg" title="呵呵"><img src="images/wall/mwsf-20.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-20" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-21.jpg" title="呵呵"><img src="images/wall/mwsf-21.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-21" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-25.jpg" title="呵呵"><img src="images/wall/mwsf-25.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-25" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-27.jpg" title="呵呵"><img src="images/wall/mwsf-27.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-27" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-28.jpg" title="呵呵"><img src="images/wall/mwsf-28.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-28" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-29.jpg" title="呵呵"><img src="images/wall/mwsf-29.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-29" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-30.jpg" title="呵呵"><img src="images/wall/mwsf-30.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-30" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-31.jpg" title="呵呵"><img src="images/wall/mwsf-31.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-31" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-24.jpg" title="呵呵"><img src="images/wall/mwsf-24.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-24" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-4.jpg" title="呵呵"><img src="images/wall/mwsf-4.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-4" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-9.jpg" title="呵呵"><img src="images/wall/mwsf-9.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-9" class="photo" /></a>
+    <a href="images/wall/mwsf-2.jpg" title="呵呵"><img src="images/wall/mwsf-2.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-2" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-14.jpg" title="呵呵"><img src="images/wall/mwsf-14.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-14" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-5.jpg" title="呵呵"><img src="images/wall/mwsf-5.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-5" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-6.jpg" title="呵呵"><img src="images/wall/mwsf-6.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-6" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-16.jpg" title="呵呵"><img src="images/wall/mwsf-16.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-16" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-20.jpg" title="呵呵"><img src="images/wall/mwsf-20.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-20" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-21.jpg" title="呵呵"><img src="images/wall/mwsf-21.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-21" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-25.jpg" title="呵呵"><img src="images/wall/mwsf-25.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-25" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-27.jpg" title="呵呵"><img src="images/wall/mwsf-27.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-27" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-28.jpg" title="呵呵"><img src="images/wall/mwsf-28.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-28" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-29.jpg" title="呵呵"><img src="images/wall/mwsf-29.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-29" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-30.jpg" title="呵呵"><img src="images/wall/mwsf-30.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-30" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-31.jpg" title="呵呵"><img src="images/wall/mwsf-31.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-31" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-24.jpg" title="呵呵"><img src="images/wall/mwsf-24.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-24" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-4.jpg" title="呵呵"><img src="images/wall/mwsf-4.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-4" class="photo" /></a>
+	
+	<a href="images/wall/mwsf-9.jpg" title="呵呵"><img src="images/wall/mwsf-9.jpg" width="161" height="123" border="0" alt="" id="img-mwsf-9" class="photo" /></a>
+    
+	</div>
+<!--第二版-->
+<div id='bg' class="clbg">
+<div class="title2">
+    <h>煞笔</h>
+    <p>呵呵呵</br>
+    呵呵你妹啊 <!--姚霖浩-->你个煞笔！</br>
+   </p>
+   </div>
+    <img src="images/bg2.png">
+    </div>
+<!--第三版-->
+    <div id='bg2' class="clbg2">
+<div class="title3">
+  
+   </div>
+    <img src="images/bg3.png">
+    </div>
+    
+    
+<!--导航栏 
+<div class="nav_menu">
+	<div class="nav">
+		<div class="list" id="navlist">
+			<ul id="navfouce">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#news">One</a></li>
+				<li><a href="#contact">Two</a></li>
+				<li><a href="#about">Three</a></li>
+			</ul>
+            
+		</div>
+		<div class="box" id="navbox" style="height:0px;opacity:0;overflow:hidden;">
+			<div class="cont" style="display:none;">
+				<ul class="sublist clearfix">
+                <li>
+                   <p class="mcate-item-bd">
+						<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">鸭蛋</a>
+							<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">鸡蛋</a>
+							<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">鹅蛋</a>
+                            <a  href="http://weibo.com/aijiawanan?from=feed&loc=nickname">蛇蛋</a>  
+                     <p class="mcate-item-bd">   
+                     </li>  
+                    <li>	
+                    <p class="mcate-item-bd">
+                    		<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">鳄鱼蛋</a>
+							<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">鸵鸟蛋</a>
+							<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">蛋蛋</a>
+                            <a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">番茄炒蛋</a>
+                            </p>
+                    </li>
+                 </ul> 
+           </div>
+           <div class="cont" style="display:none;">
+				<ul class="sublist clearfix">
+                <li>
+                   <p class="mcate-item-bd">
+						<a href="http://www.baidu.com">厉害喔</a>
+							<a href="http://www.baidu.com">机智</a>
+							<a href="http://www.baidu.com">你像个</a>
+                            <a href="http://www.baidu.com">沙海</a>  
+                     <p class="mcate-item-bd">   
+                     </li>  
+                    <li>	
+                    <p class="mcate-item-bd">
+                    		<a href="http://www.baidu.com">那是</a>
+							<a href="http://www.baidu.com">还好啦</a>
+							<a href="http://www.baidu.com">你比较像</a>
+                            <a href="http://www.baidu.com">恩</a>
+                            </p>
+                    </li>
+                 </ul> 
+           </div>
+           <div class="cont" style="display:none;">
+				<ul class="sublist clearfix">
+                <li>
+                   <p class="mcate-item-bd">
+						<a href="http://www.baidu.com">One</a>
+							<a href="http://www.baidu.com">Two</a>
+							<a href="http://www.baidu.com">Three</a>
+                            <a href="http://www.baidu.com">Four</a>  
+                     <p class="mcate-item-bd">   
+                     </li>  
+                    <li>	
+                    <p class="mcate-item-bd">
+                    		<a href="http://www.baidu.com">One</a>
+							<a href="http://www.baidu.com">Two</a>
+							<a href="http://www.baidu.com">Three</a>
+                            <a href="http://www.baidu.com">Four</a>
+                            </p>
+                    </li>
+                 </ul> 
+           </div>
+           <div class="cont" style="display:none;">
+				<ul class="sublist clearfix">
+                <li>
+                   <p class="mcate-item-bd">
+						<a href="http://www.baidu.com">会唱的</a>
+							<a href="http://www.baidu.com">一起唱</a>
+							<a href="http://www.baidu.com">让我看见</a>
+                            <a href="http://www.baidu.com">你们的双手</a>  
+                     <p class="mcate-item-bd">   
+                     </li>  
+                    <li>	
+                    <p class="mcate-item-bd">
+                    		<a href="http://www.baidu.com">不会唱</a>
+							<a href="http://www.baidu.com">就不唱</a>
+							<a href="http://www.baidu.com">不让你看见</a>
+                            <a href="http://www.baidu.com">我的双脚</a>
+                            </p>
+                    </li>
+                 </ul> 
+           </div>
+                     
+	</div>
+ 
+    </div>
+    </div>-->
+    <div>
+        <hr class="hr" />
+        </div> 
+ <!--导航效果控制-->
+<script type="text/javascript">
+(function(){
+
+	var time = null;
+	var list = $("#navlist");
+	var box = $("#navbox");
+	var lista = list.find("a");
+	
+	for(var i=0,j=lista.length;i<j;i++){
+		if(lista[i].className == "now"){
+			var olda = i;
+		}
+	}
+	
+	var box_show = function(hei){
+		box.stop().animate({
+			height:hei,
+			opacity:1
+		},400);
+	}
+	
+	var box_hide = function(){
+		box.stop().animate({
+			height:0,
+			opacity:0
+		},400);
+	}
+	
+	lista.hover(function(){
+		lista.removeClass("now");
+		$(this).addClass("now");
+		clearTimeout(time);
+		var index = list.find("a").index($(this));
+		box.find(".cont").hide().eq(index).show();
+		var _height = box.find(".cont").eq(index).height()+54;
+		box_show(_height)
+	},function(){
+		time = setTimeout(function(){	
+			box.find(".cont").hide();
+			box_hide();
+		},50);
+		lista.removeClass("now");
+		lista.eq(olda).addClass("now");
+	});
+	
+	box.find(".cont").hover(function(){
+		var _index = box.find(".cont").index($(this));
+		lista.removeClass("now");
+		lista.eq(_index).addClass("now");
+		clearTimeout(time);
+		$(this).show();
+		var _height = $(this).height()+54;
+		box_show(_height);
+	},function(){
+		time = setTimeout(function(){		
+			$(this).hide();
+			box_hide();
+		},50);
+		lista.removeClass("now");
+		lista.eq(olda).addClass("now");
+	});
+
+})();
+</script>
+<!--图片滑动门-->
+<div id="sidebar">
+           <ul>
+                <li>
+			 		<div class='imgTitle'>
+		 			  <div>
+			 				<p>
+			 					<span>主页</span>
+			 				</p>
+			 				<p style="top:24px;">
+			 					<span class="simgTitle">回到首页</span>
+			 				</p>
+			 			</div>
+			 		</div>
+			 	</li>
+           </ul>
+            <ul>
+                <li>
+			 		<div class='imgTitle'>
+			 			<div>
+			 				<p>
+			 					<span>作品</span>
+			 				</p>
+			 				<p style="top:24px;">
+			 					<span  class="simgTitle">欣赏摄影作品</span>
+			 				</p>
+			 			</div>
+			 		</div>
+			 	</li>
+           </ul>
+           
+                       <ul>
+                <li>
+			 		<div class='imgTitle'>
+			 			<div>
+			 				<p>
+			 					<span>技巧</span>
+			 				</p>
+			 				<p style="top:24px;">
+			 					<span  class="simgTitle">分享摄像技巧</span>
+			 				</p>
+			 			</div>
+			 		</div>
+			 	</li>
+           </ul>
+                       <ul>
+                <li>
+			 		<div class='imgTitle'>
+			 			<div>
+			 				<p>
+			 					<span>关于</span>
+			 				</p>
+			 				<p style="top:24px;">
+			 					<span  class="simgTitle">联系我们</span>
+			 				</p>
+			 			</div>
+			 		</div>
+			 	</li>
+           </ul>
+ </div>
+<!--第一版左移背景-->
+ <div style="position:fixed">
+ <marquee  
+ 	behavior="alternate" 
+    align="right"
+    scrollamount="1" 
+    scrolldelay=20>
+    <img src="images/marquee.png" width=1980 height=720 border=0>
+  </marquee>
+  </div>
+  <!--第一版-->
+  <div class="logo"><img src="images/logo.png"></div>
+  <div class="title">
+  <h1>
+    摄想
+  </h1>
+  <p>拍摄生命，用影像呼吸。足迹留下，影子取走。<br />
+  用摄影追赶时代，目击时代的现场。用摄影记录年代，目击时代的变迁。<br />
+  我用摄影向你们提问，却不用告诉我答案。<br />
+  </p>
+  <div id="scollWin" class="arrow"><img src="images/arrow.png"></div>
+  </div>
+  <div id="scollWin2" class="arrow2"><img src="images/arrow.png"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!--图片滑动门效果控制-------------------->
+ <script src="js/FancyZoom.js" language="JavaScript" type="text/javascript"></script>
+    <script src="js/FancyZoomHTML.js" language="JavaScript" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+		<script>
+			$(function(){
+				var aLi = $('#sidebar ul li');
+				var oImg,aP;
+				aLi.hover(function(){
+					oImg = $(this).find('.imgBox');
+					aP = $(this).find('p');
+					oImg.stop().animate({
+						top:-180
+					},450);
+					aP.eq(0).stop().animate({
+						top:24
+					},450);
+					aP.eq(1).stop().animate({
+						top:0
+					},450);
+				},function(){
+					oImg.stop().animate({
+						top:0
+					},450);
+					aP.eq(0).stop().animate({
+						top:0
+					},450);
+					aP.eq(1).stop().animate({
+						top:24
+					},450);
+				})
+			})
+		</script>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onLoad="setupZoom();" background="images/pic (64).jpg">
+
+<!--回顶部-->
+<div id='rtt' style="cursor:pointer;"></div>
+<!--向下滑动 控制-->
+<script>  
+$(function()  
+{  
+     $('#scollWin').click(function(){  
+         $('html,body').animate({  
+         scrollTop: $("#bg").offset().top  
+         }, 2000);  
+     })  
+})  
+$(function()  
+{  
+     $('#scollWin2').click(function(){  
+         $('html,body').animate({  
+         scrollTop: $("#bg2").offset().top  
+         }, 3000);  
+     })  
+})  
+</script> 
+<!--导航栏 
+<div class="nav_menu">
+	<div class="nav">
+		<div class="list" id="navlist">
+			<ul id="navfouce">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#news">One</a></li>
+				<li><a href="#contact">Two</a></li>
+				<li><a href="#about">Three</a></li>
+			</ul>
+            
+		</div>
+		<div class="box" id="navbox" style="height:0px;opacity:0;overflow:hidden;">
+			<div class="cont" style="display:none;">
+				<ul class="sublist clearfix">
+                <li>
+                   <p class="mcate-item-bd">
+						<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">鸭蛋</a>
+							<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">鸡蛋</a>
+							<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">鹅蛋</a>
+                            <a  href="http://weibo.com/aijiawanan?from=feed&loc=nickname">蛇蛋</a>  
+                     <p class="mcate-item-bd">   
+                     </li>  
+                    <li>	
+                    <p class="mcate-item-bd">
+                    		<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">鳄鱼蛋</a>
+							<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">鸵鸟蛋</a>
+							<a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">蛋蛋</a>
+                            <a href="http://weibo.com/aijiawanan?from=feed&loc=nickname">番茄炒蛋</a>
+                            </p>
+                    </li>
+                 </ul> 
+           </div>
+           <div class="cont" style="display:none;">
+				<ul class="sublist clearfix">
+                <li>
+                   <p class="mcate-item-bd">
+						<a href="http://www.baidu.com">厉害喔</a>
+							<a href="http://www.baidu.com">机智</a>
+							<a href="http://www.baidu.com">你像个</a>
+                            <a href="http://www.baidu.com">沙海</a>  
+                     <p class="mcate-item-bd">   
+                     </li>  
+                    <li>	
+                    <p class="mcate-item-bd">
+                    		<a href="http://www.baidu.com">那是</a>
+							<a href="http://www.baidu.com">还好啦</a>
+							<a href="http://www.baidu.com">你比较像</a>
+                            <a href="http://www.baidu.com">恩</a>
+                            </p>
+                    </li>
+                 </ul> 
+           </div>
+           <div class="cont" style="display:none;">
+				<ul class="sublist clearfix">
+                <li>
+                   <p class="mcate-item-bd">
+						<a href="http://www.baidu.com">One</a>
+							<a href="http://www.baidu.com">Two</a>
+							<a href="http://www.baidu.com">Three</a>
+                            <a href="http://www.baidu.com">Four</a>  
+                     <p class="mcate-item-bd">   
+                     </li>  
+                    <li>	
+                    <p class="mcate-item-bd">
+                    		<a href="http://www.baidu.com">One</a>
+							<a href="http://www.baidu.com">Two</a>
+							<a href="http://www.baidu.com">Three</a>
+                            <a href="http://www.baidu.com">Four</a>
+                            </p>
+                    </li>
+                 </ul> 
+           </div>
+           <div class="cont" style="display:none;">
+				<ul class="sublist clearfix">
+                <li>
+                   <p class="mcate-item-bd">
+						<a href="http://www.baidu.com">会唱的</a>
+							<a href="http://www.baidu.com">一起唱</a>
+							<a href="http://www.baidu.com">让我看见</a>
+                            <a href="http://www.baidu.com">你们的双手</a>  
+                     <p class="mcate-item-bd">   
+                     </li>  
+                    <li>	
+                    <p class="mcate-item-bd">
+                    		<a href="http://www.baidu.com">不会唱</a>
+							<a href="http://www.baidu.com">就不唱</a>
+							<a href="http://www.baidu.com">不让你看见</a>
+                            <a href="http://www.baidu.com">我的双脚</a>
+                            </p>
+                    </li>
+                 </ul> 
+           </div>
+                     
+	</div>
+ 
+    </div>
+    </div>-->
+    <div>
+        <hr class="hr" />
+        </div> 
+ <!--导航效果控制-->
+<script type="text/javascript">
+(function(){
+
+	var time = null;
+	var list = $("#navlist");
+	var box = $("#navbox");
+	var lista = list.find("a");
+	
+	for(var i=0,j=lista.length;i<j;i++){
+		if(lista[i].className == "now"){
+			var olda = i;
+		}
+	}
+	
+	var box_show = function(hei){
+		box.stop().animate({
+			height:hei,
+			opacity:1
+		},400);
+	}
+	
+	var box_hide = function(){
+		box.stop().animate({
+			height:0,
+			opacity:0
+		},400);
+	}
+	
+	lista.hover(function(){
+		lista.removeClass("now");
+		$(this).addClass("now");
+		clearTimeout(time);
+		var index = list.find("a").index($(this));
+		box.find(".cont").hide().eq(index).show();
+		var _height = box.find(".cont").eq(index).height()+54;
+		box_show(_height)
+	},function(){
+		time = setTimeout(function(){	
+			box.find(".cont").hide();
+			box_hide();
+		},50);
+		lista.removeClass("now");
+		lista.eq(olda).addClass("now");
+	});
+	
+	box.find(".cont").hover(function(){
+		var _index = box.find(".cont").index($(this));
+		lista.removeClass("now");
+		lista.eq(_index).addClass("now");
+		clearTimeout(time);
+		$(this).show();
+		var _height = $(this).height()+54;
+		box_show(_height);
+	},function(){
+		time = setTimeout(function(){		
+			$(this).hide();
+			box_hide();
+		},50);
+		lista.removeClass("now");
+		lista.eq(olda).addClass("now");
+	});
+
+})();
+</script>
+<!--图片滑动门-->
+<div id="sidebar">
+           <ul>
+                <li>
+			 		<div class='imgTitle'>
+		 			  <div>
+			 				<p>
+			 					<span>主页</span>
+			 				</p>
+			 				<p style="top:24px;">
+			 					<span class="simgTitle">回到首页</span>
+			 				</p>
+			 			</div>
+			 		</div>
+			 	</li>
+           </ul>
+            <ul>
+                <li>
+			 		<div class='imgTitle'>
+			 			<div>
+			 				<p>
+			 					<span>作品</span>
+			 				</p>
+			 				<p style="top:24px;">
+			 					<span  class="simgTitle">欣赏摄影作品</span>
+			 				</p>
+			 			</div>
+			 		</div>
+			 	</li>
+           </ul>
+           
+                       <ul>
+                <li>
+			 		<div class='imgTitle'>
+			 			<div>
+			 				<p>
+			 					<span>技巧</span>
+			 				</p>
+			 				<p style="top:24px;">
+			 					<span  class="simgTitle">分享摄像技巧</span>
+			 				</p>
+			 			</div>
+			 		</div>
+			 	</li>
+           </ul>
+                       <ul>
+                <li>
+			 		<div class='imgTitle'>
+			 			<div>
+			 				<p>
+			 					<span>关于</span>
+			 				</p>
+			 				<p style="top:24px;">
+			 					<span  class="simgTitle">联系我们</span>
+			 				</p>
+			 			</div>
+			 		</div>
+			 	</li>
+           </ul>
+ </div>
+  <div class="logo"><img src="images/logo.png"></div>
+
+
+
+<SCRIPT> 
+var intTimeStep=20; 
+var isIe=(window.ActiveXObject)?true:false; 
+var intAlphaStep=(isIe)?5:0.05; 
+var curSObj=null; 
+var curOpacity=null; 
+function startObjVisible(objId) 
+{ 
+curSObj=document.getElementById(objId); 
+setObjState(); 
+} 
+function setObjState(evTarget) 
+{ 
+if (curSObj.style.display==""){curOpacity=1;setObjClose();} 
+else{ 
+if(isIe) 
+{ 
+curSObj.style.cssText='DISPLAY: none;Z-INDEX: 1; FILTER: alpha(opacity=0); POSITION: absolute;'; 
+curSObj.filters.alpha.opacity=0; 
+}else 
+{ 
+curSObj.style.opacity=0 
+} 
+curSObj.style.display='';
+curOpacity=0; 
+setObjOpen(); 
+} 
+}
+function setObjOpen() 
+{ 
+if(isIe) 
+{ 
+curSObj.filters.alpha.opacity+=intAlphaStep; 
+if (curSObj.filters.alpha.opacity<100) setTimeout('setObjOpen()',intTimeStep); 
+}else{ 
+curOpacity+=intAlphaStep; 
+curSObj.style.opacity =curOpacity; 
+if (curOpacity<1) setTimeout('setObjOpen()',intTimeStep); 
+} 
+}
+function setObjClose() 
+{ 
+if(isIe) 
+{ 
+curSObj.filters.alpha.opacity-=intAlphaStep; 
+if (curSObj.filters.alpha.opacity>0) { 
+setTimeout('setObjClose()',intTimeStep);} 
+else {curSObj.style.display="none";} 
+}else{ 
+curOpacity-=intAlphaStep; 
+if (curOpacity>0) { 
+curSObj.style.opacity =curOpacity; 
+setTimeout('setObjClose()',intTimeStep);} 
+else {curSObj.style.display='none';} 
+} 
+} 
+</SCRIPT>
+<script>
+function show1(){
+                document.getElementById("course").style.display="none";
+
+	}
+	</script>
+ <div id="course" class="coursemain">
+		<ul class="courselist">
+                <li>
+                   <p     class="liststy";
+                          onclick=show1();>
+						    <a onmouseover=startObjVisible('objDiv')
+                          onmouseout=startObjVisible('objDiv')>基础理论</a>
+							<a onmouseover=startObjVisible('objDiv')
+                          onmouseout=startObjVisible('objDiv')>实战技巧</a>
+							<a onmouseover=startObjVisible('objDiv')
+                          onmouseout=startObjVisible('objDiv')>后期教程</a>
+                            <a onmouseover=startObjVisible('objDiv')
+                          onmouseout=startObjVisible('objDiv')>心得体会</a>
+                            <a onmouseover=startObjVisible('objDiv')
+                          onmouseout=startObjVisible('objDiv')>器材周边</a>
+                            </p>    
+                     </li>  
+       </ul>
+  </div>
+  <DIV id="objDiv" style="DISPLAY: none;"> 
+<img src="images/bg3.png"></DIV>
+</body>
+</html>
